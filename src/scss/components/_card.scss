@@ -1,0 +1,51 @@
+@use '../var';
+@use '../mixin';
+
+.card {
+
+    background-color: var.$color-white;
+    padding: var.$gutter;
+    border-radius: var.$border-radius-small;
+    margin-bottom: var.$gutter-double;
+
+    &__header {
+
+        h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: var.$gutter-half;
+            text-align: center;
+        }
+    }
+
+    &__body {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: var.$gutter;
+        img {
+            border-radius: var.$border-radius-small;
+            width: 60%;
+        }
+
+        p {
+            text-align: justify;
+            padding: 0 var.$gutter;
+        }
+
+    }
+
+    &__action {
+        display: block;
+        margin-top: var.$gutter;
+        text-align: center;
+        color: var.$color-blue;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 1s all;
+
+        &:before {
+            content: '› ';
+        }
+
+    }
+}

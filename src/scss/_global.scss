@@ -1,0 +1,78 @@
+@use 'mixin';
+@use 'var';
+
+body {
+    background-color: var.$color-white;
+    font-family: var.$main-font;
+    line-height: 1.4;
+}
+
+h1 {
+    color: darken(var.$color-blue, 40%);
+    font-size: 1.7rem;
+}
+
+h2 {
+    color: darken(var.$color-blue, 40%);
+    font-size: 1.6rem;
+    border-bottom: var.$color-blue solid 2px;
+    margin-bottom: var.$gutter;
+    text-align: center;
+
+    @include mixin.medium {
+        text-align: left;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+main {
+    margin: auto;
+    margin-top: var.$header-height;
+    width: 90%;
+    max-width: 40rem;
+    min-height: var.$main-min-height;
+    padding-top: var.$gutter-double;
+    margin-top: var.$header-height-small;
+
+    section {
+        margin-bottom: var.$gutter;
+    }
+}
+
+#intro {
+    min-height: 25vh;
+    position: relative;
+    background-image: url("../images/jean-pierre.png");
+    background-repeat: no-repeat;
+    background-position: top right;
+
+    h2 {
+        width: 50%;
+    }
+
+    p {
+        width: 50%;
+    }
+}
+
+#last-jobs {
+
+    .job-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .card {
+            width: 100%;
+        }
+    }
+
+    .see-all {
+        padding-bottom: var.$gutter;
+        display: flex;
+        justify-content: center;
+    }
+}
