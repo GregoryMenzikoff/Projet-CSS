@@ -4,7 +4,7 @@
 body {
     background-color: var.$color-white;
     font-family: var.$main-font;
-    line-height: 1.4;
+    line-height: 1.4; 
 }
 
 h1 {
@@ -40,6 +40,14 @@ main {
     section {
         margin-bottom: var.$gutter;
     }
+
+    @include mixin.big {
+        max-width:var.$container-width-medium;  
+    }
+
+    @include mixin.big {
+       max-width:var.$container-width-big ; 
+    }
 }
 
 #intro {
@@ -51,11 +59,17 @@ main {
 
     h2 {
         width: 50%;
+        @include mixin.big {
+            width: 80%;
+        }
     }
 
     p {
         width: 50%;
-    }
+        @include mixin.big {
+            width: 80%;
+        }
+    }  
 }
 
 #last-jobs {
@@ -67,6 +81,14 @@ main {
 
         .card {
             width: 100%;
+
+            @include mixin.medium {
+                width: calc(50% - var.$gutter);
+            }
+
+            @include mixin.big {
+                width: calc(15% - var.$gutter);
+            }
         }
     }
 

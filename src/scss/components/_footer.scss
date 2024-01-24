@@ -23,6 +23,21 @@
                 color: var.$color-yellow;
                 text-decoration: none;
             }
+
+            @include mixin.medium {
+                margin-right: 0.8rem;
+            }
+
+            :hover {
+                @include mixin.hover(var.$color-yellow);
+            }
+
+        }
+
+        @include mixin.medium {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
         }
     }
 

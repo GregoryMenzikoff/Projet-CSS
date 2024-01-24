@@ -11,3 +11,9 @@
     @content;
   }
 }
+
+@mixin hover($color) {
+    text-decoration: underline;
+    color: $color;
+    margin-top: 0.4em;  
+}
